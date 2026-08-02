@@ -25,7 +25,7 @@ export const navigation: NavLink[] = [
   { label: "Главная", href: "/" },
   { label: "Услуги", href: "/services" },
   { label: "Портфолио", href: "/projects" },
-  { label: "Блог", href: "/#blog" },
+  { label: "Блог", href: "/blog" },
   { label: "О нас", href: "/about" },
 ];
 

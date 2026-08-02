@@ -24,3 +24,19 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     body: JSON.stringify(input),
   });
 }
+
+/** Подписка на рассылку блога — тот же принцип, что и у формы заявки. */
+export async function subscribeToBlog(email: string): Promise<LeadResult> {
+  if (!isApiEnabled) {
+    await new Promise((resolve) => setTimeout(resolve, 600));
+    return {
+      ok: true,
+      message: `Готово! Дайджест будет приходить на ${email.trim()}.`,
+    };
+  }
+
+  return apiFetch<LeadResult>("/subscribers", {
+    method: "POST",
+    body: JSON.stringify({ email: email.trim() }),
+  });
+}

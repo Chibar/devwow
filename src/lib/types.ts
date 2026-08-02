@@ -350,6 +350,56 @@ export interface ProjectsPage {
   cta: ProjectsCta;
 }
 
+/* ─── Страница «Блог» ──────────────────────────────────────────────── */
+
+export interface BlogHero {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  lead: string;
+  description: string;
+}
+
+export interface ArticleCategory {
+  id: string;
+  label: string;
+}
+
+export interface Article {
+  id: string;
+  title: string;
+  excerpt: string;
+  /** id рубрик из `ArticleCategory` — по ним работает фильтр и подписи */
+  categoryIds: string[];
+  readingTime: string;
+  date: string;
+  visual: string;
+  href: string;
+}
+
+export interface FeaturedArticle extends Article {
+  badge: string;
+}
+
+export interface SubscribeBlock {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  description: string;
+  placeholder: string;
+  submitLabel: string;
+  disclaimer: string;
+}
+
+export interface BlogPage {
+  hero: BlogHero;
+  featured: FeaturedArticle;
+  listEyebrow: string;
+  categories: ArticleCategory[];
+  articles: Article[];
+  subscribe: SubscribeBlock;
+}
+
 /** Полезная нагрузка формы заявки. */
 export interface LeadInput {
   name: string;
