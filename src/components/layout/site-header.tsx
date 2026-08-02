@@ -42,7 +42,7 @@ export async function SiteHeader() {
             {/* Обёртка, а не `hidden` на самой кнопке: display-утилиты Tailwind
                 лежат в одном слое и `inline-flex` перебивал бы `hidden`. */}
             <div className="hidden sm:block">
-              <Link href="/#contact" className={buttonClasses("primary", "sm")}>
+              <Link href="/contacts" className={buttonClasses("primary", "sm")}>
                 Обсудить проект
                 <ArrowRight className="size-3.5" />
               </Link>

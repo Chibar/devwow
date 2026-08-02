@@ -1,0 +1,148 @@
+import type { ContactsPage } from "@/lib/types";
+
+/**
+ * Мок-данные страницы «Контакты». Тексты и реквизиты взяты из макета Figma
+ * (frame «Контакты»). Структура — под будущие эндпоинты FastAPI.
+ */
+export const contactsPage: ContactsPage = {
+  hero: {
+    eyebrow: "Контакты",
+    titleLead: "Свяжитесь с ",
+    titleAccent: "нами",
+    lead: "Обсудим ваш проект, ответим на вопросы или просто познакомимся.",
+    description:
+      "DEV — это команда экспертов, которая создаёт цифровые продукты. Будем рады помочь.",
+    highlights: [
+      {
+        id: "phone",
+        icon: "phone",
+        label: "Телефон",
+        value: "+7 (999) 123-45-67",
+        note: "Пн–Пт, 10:00–19:00",
+        href: "tel:+79991234567",
+      },
+      {
+        id: "email",
+        icon: "mail",
+        label: "Email",
+        value: "info@dev.studio",
+        note: "Ответим за 24 часа",
+        href: "mailto:info@dev.studio",
+      },
+      {
+        id: "telegram",
+        icon: "telegram",
+        label: "Telegram",
+        value: "@dev_studio",
+        note: "Быстрый способ связи",
+        href: "#",
+      },
+    ],
+  },
+
+  channelsEyebrow: "Наши контакты",
+  channelsTitle: "Как с нами связаться",
+  channelsDescription: "Выберите удобный способ — ответим быстро и по делу.",
+  channels: [
+    {
+      id: "phone",
+      icon: "phone",
+      label: "Телефон",
+      value: "+7 (999) 123-45-67",
+      note: "Пн–Пт, 10:00–19:00 (МСК)",
+      href: "tel:+79991234567",
+    },
+    {
+      id: "email",
+      icon: "mail",
+      label: "Email",
+      value: "info@dev.studio",
+      note: "Ответим в течение 24 часов",
+      href: "mailto:info@dev.studio",
+    },
+    {
+      id: "telegram",
+      icon: "telegram",
+      label: "Telegram",
+      value: "@dev_studio",
+      note: "Самый быстрый способ связи",
+      href: "#",
+    },
+    {
+      id: "address",
+      icon: "address",
+      label: "Адрес",
+      value: "Чебоксары, ул. Гагарина, 3",
+      note: "Также работаем из Йошкар-Олы",
+    },
+    {
+      id: "hours",
+      icon: "clock",
+      label: "Часы работы",
+      value: "Пн–Пт, 10:00–19:00",
+      note: "Московское время (UTC+3)",
+    },
+  ],
+
+  socialsLabel: "Мы в сети",
+  socials: [
+    { code: "TG", label: "Telegram", href: "#" },
+    { code: "VC", label: "vc.ru", href: "#" },
+    { code: "HH", label: "HeadHunter", href: "#" },
+  ],
+
+  form: {
+    eyebrow: "Форма обратной связи",
+    title: "Оставьте заявку",
+    description: "Опишите задачу — подберём решение и дадим оценку за 24 часа.",
+    channelLabel: "Как удобнее связаться?",
+    channels: ["Телефон", "Telegram", "Email"],
+    submitLabel: "Отправить заявку",
+    note: "Ответим в течение 24 часов · Данные защищены",
+  },
+
+  map: {
+    eyebrow: "Офис",
+    title: "Где мы находимся",
+    image: "/contacts/map.svg",
+    card: {
+      name: "DEV Studio",
+      kind: "Офис",
+      address: "г. Чебоксары, ул. Гагарина, 3",
+      note: "Также работаем из Йошкар-Олы",
+      link: { label: "Открыть в Яндекс.Картах", href: "#" },
+    },
+  },
+
+  requisites: {
+    eyebrow: "Юридическая информация",
+    title: "Реквизиты компании",
+    description:
+      "Для оформления договора и первичных документов. Работаем официально: НДС, ЭДО, акты.",
+    download: { label: "Скачать реквизиты PDF", href: "#" },
+    rows: [
+      {
+        label: "Полное наименование",
+        value: "Общество с ограниченной ответственностью «ДЕВ»",
+      },
+      { label: "Краткое наименование", value: "ООО «ДЕВ»" },
+      { label: "ИНН", value: "2100123456" },
+      { label: "КПП", value: "210001001" },
+      { label: "ОГРН", value: "1212100012345" },
+      { label: "Дата регистрации", value: "15 марта 2013 г." },
+      {
+        label: "Юридический адрес",
+        value:
+          "428000, Чувашская Республика, г. Чебоксары, ул. Гагарина, д. 3, оф. 12",
+      },
+      { label: "Расчётный счёт", value: "40702810812345678901" },
+      { label: "Банк", value: "ПАО Сбербанк, г. Москва" },
+      { label: "БИК", value: "044525225" },
+      { label: "Корр. счёт", value: "30101810400000000225" },
+      {
+        label: "Генеральный директор",
+        value: "Громов Алексей Игоревич (действует на основании Устава)",
+      },
+    ],
+  },
+};

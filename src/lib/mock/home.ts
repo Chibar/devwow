@@ -27,6 +27,7 @@ export const navigation: NavLink[] = [
   { label: "Портфолио", href: "/projects" },
   { label: "Блог", href: "/blog" },
   { label: "О нас", href: "/about" },
+  { label: "Контакты", href: "/contacts" },
 ];
 
 export const hero: Hero = {

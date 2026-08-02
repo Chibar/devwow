@@ -442,6 +442,78 @@ export interface BlogPage {
   subscribe: SubscribeBlock;
 }
 
+/* ─── Страница «Контакты» ──────────────────────────────────────────── */
+
+/** Иконка контакта — имя из набора, а не путь к файлу. */
+export type ContactIcon = "phone" | "mail" | "telegram" | "address" | "clock";
+
+export interface ContactChannel {
+  id: string;
+  icon: ContactIcon;
+  label: string;
+  value: string;
+  note: string;
+  href?: string;
+}
+
+export interface ContactsHero {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  lead: string;
+  description: string;
+  highlights: ContactChannel[];
+}
+
+export interface ContactsForm {
+  eyebrow: string;
+  title: string;
+  description: string;
+  channelLabel: string;
+  channels: string[];
+  submitLabel: string;
+  note: string;
+}
+
+export interface ContactsMap {
+  eyebrow: string;
+  title: string;
+  image: string;
+  card: {
+    name: string;
+    kind: string;
+    address: string;
+    note: string;
+    link: NavLink;
+  };
+}
+
+export interface RequisiteRow {
+  label: string;
+  value: string;
+}
+
+export interface ContactsRequisites {
+  eyebrow: string;
+  title: string;
+  description: string;
+  download: NavLink;
+  rows: RequisiteRow[];
+}
+
+export interface ContactsPage {
+  hero: ContactsHero;
+  channelsEyebrow: string;
+  channelsTitle: string;
+  channelsDescription: string;
+  channels: ContactChannel[];
+  socialsLabel: string;
+  socials: { code: string; label: string; href: string }[];
+  form: ContactsForm;
+  map: ContactsMap;
+  requisites: ContactsRequisites;
+}
+
 /** Полезная нагрузка формы заявки. */
 export interface LeadInput {
   name: string;

@@ -34,6 +34,7 @@ src/
     projects/page.tsx страница «Проекты»
     blog/page.tsx     страница «Блог»
     blog/[slug]/      детальная страница статьи
+    contacts/page.tsx страница «Контакты»
     globals.css       дизайн-токены из макета
   components/
     layout/           шапка, подвал, мобильное меню
@@ -43,6 +44,7 @@ src/
     projects/         секции страницы «Проекты»
     blog/             секции страницы «Блог»
     article/          секции детальной страницы статьи
+    contacts/         секции страницы «Контакты»
     ui/               кнопка, контейнер, заголовок секции, FAQ, форма
   lib/
     types.ts          доменные типы (контракт с бэкендом)
@@ -54,7 +56,8 @@ public/
   principles/ tech-light/                       ассеты «О нас»
   service-icons/ process-icons/ case-patterns/  ассеты «Услуг»
   project-visuals/                              ассеты «Проектов»
-  article-visuals/                              ассеты «Блога»
+  article-visuals/                              ассеты «Блога» и статей
+  contacts/                                     карта на «Контактах»
 ```
 
 ### Брендинг
@@ -77,8 +80,8 @@ public/
 
 1. Задать `NEXT_PUBLIC_API_URL` в `.env.local` (пример — `.env.example`).
 2. Реализовать на бэкенде эндпоинты `/about`, `/services-page`,
-   `/projects-page`, `/blog-page`, `/articles/{slug}`, `/subscribers`,
-   `/hero`, `/services`, `/portfolio`,
+   `/projects-page`, `/blog-page`, `/articles/{slug}`, `/contacts-page`,
+   `/subscribers`, `/hero`, `/services`, `/portfolio`,
    `/team`, `/posts`, `/reviews`, `/faq`, `/clients`, `/technologies`,
    `/contact`, `/footer`, `/navigation` и `POST /leads`.
 
