@@ -24,7 +24,7 @@ export const blogPage: BlogPage = {
     readingTime: "8 мин",
     date: "15.07.2026",
     visual: "/article-visuals/featured.svg",
-    href: "#",
+    href: "/blog/stack-2026",
   },
 
   listEyebrow: "Все статьи",
@@ -46,7 +46,7 @@ export const blogPage: BlogPage = {
       readingTime: "6 мин",
       date: "03.07.2026",
       visual: "/article-visuals/dots.svg",
-      href: "#",
+      href: "/blog/bitrix-2026",
     },
     {
       id: "payments-checklist",
@@ -57,7 +57,7 @@ export const blogPage: BlogPage = {
       readingTime: "11 мин",
       date: "27.06.2026",
       visual: "/article-visuals/lines.svg",
-      href: "#",
+      href: "/blog/payments-checklist",
     },
     {
       id: "agile-waterfall",
@@ -68,7 +68,7 @@ export const blogPage: BlogPage = {
       readingTime: "9 мин",
       date: "18.06.2026",
       visual: "/article-visuals/circles.svg",
-      href: "#",
+      href: "/blog/agile-waterfall",
     },
     {
       id: "postgres-mongo",
@@ -79,7 +79,7 @@ export const blogPage: BlogPage = {
       readingTime: "12 мин",
       date: "10.06.2026",
       visual: "/article-visuals/grid.svg",
-      href: "#",
+      href: "/blog/postgres-mongo",
     },
     {
       id: "api-speedup",
@@ -90,7 +90,7 @@ export const blogPage: BlogPage = {
       readingTime: "14 мин",
       date: "02.06.2026",
       visual: "/article-visuals/dots.svg",
-      href: "#",
+      href: "/blog/api-speedup",
     },
     {
       id: "docker-practices",
@@ -101,7 +101,7 @@ export const blogPage: BlogPage = {
       readingTime: "10 мин",
       date: "24.05.2026",
       visual: "/article-visuals/lines.svg",
-      href: "#",
+      href: "/blog/docker-practices",
     },
     {
       id: "estimate",
@@ -112,7 +112,7 @@ export const blogPage: BlogPage = {
       readingTime: "7 мин",
       date: "15.05.2026",
       visual: "/article-visuals/circles.svg",
-      href: "#",
+      href: "/blog/estimate",
     },
     {
       id: "microservices-bank",
@@ -123,7 +123,7 @@ export const blogPage: BlogPage = {
       readingTime: "16 мин",
       date: "07.05.2026",
       visual: "/article-visuals/grid.svg",
-      href: "#",
+      href: "/blog/microservices-bank",
     },
   ],
 

@@ -1,11 +1,21 @@
 import { Container } from "@/components/ui/container";
 import { SubscribeForm } from "@/components/blog/subscribe-form";
+import { cn } from "@/lib/cn";
 import type { SubscribeBlock } from "@/lib/types";
 
 /** Столбик двоичных цифр справа — декор из макета. */
-const binaryColumn = ["01", "10", "11", "00", "01", "10"];
+const defaultBinary = ["01", "10", "11", "00", "01", "10"];
 
-export function Subscribe({ data }: { data: SubscribeBlock }) {
+export function Subscribe({
+  data,
+  binary = defaultBinary,
+  binaryClassName = "lg:text-[60px]",
+}: {
+  data: SubscribeBlock;
+  binary?: string[];
+  /** Размер декоративного столбика: у длинных строк он мельче */
+  binaryClassName?: string;
+}) {
   return (
     <section className="bg-surface-dark py-28">
       <Container>
@@ -21,9 +31,12 @@ export function Subscribe({ data }: { data: SubscribeBlock }) {
 
           <div
             aria-hidden
-            className="pointer-events-none absolute right-16 top-20 hidden flex-col font-bold leading-none tracking-[0.3em] text-brand-700/5 lg:flex lg:text-[60px]"
+            className={cn(
+              "pointer-events-none absolute right-16 top-1/2 hidden -translate-y-1/2 flex-col gap-1 font-bold leading-none tracking-[0.3em] text-brand-700/7 lg:flex",
+              binaryClassName,
+            )}
           >
-            {binaryColumn.map((pair, index) => (
+            {binary.map((pair, index) => (
               <span key={index}>{pair}</span>
             ))}
           </div>

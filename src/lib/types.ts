@@ -391,6 +391,48 @@ export interface SubscribeBlock {
   disclaimer: string;
 }
 
+/**
+ * Блок тела статьи. В тексте `paragraph` поддерживается инлайн-разметка:
+ * `**жирный**` и `` `код` ``.
+ */
+export type ArticleBlock =
+  | { type: "lead"; text: string }
+  | { type: "paragraph"; text: string }
+  | { type: "heading2"; text: string }
+  | { type: "heading3"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "steps"; items: { title: string; text: string }[] }
+  | { type: "quote"; text: string; author: string }
+  | { type: "figure"; src: string; caption: string }
+  | { type: "code"; filename: string; code: string }
+  | { type: "stats"; items: { value: string; label: string }[] };
+
+export interface ArticleAuthor {
+  initials: string;
+  name: string;
+  role: string;
+  bio: string;
+  link: NavLink;
+}
+
+export interface ArticleDetail {
+  slug: string;
+  title: string;
+  excerpt: string;
+  categoryIds: string[];
+  /** Подпись рубрики в хлебных крошках */
+  breadcrumb: string;
+  readingTime: string;
+  publishedLabel: string;
+  publishedAt: string;
+  cover?: { src: string; caption: string };
+  author: ArticleAuthor;
+  body: ArticleBlock[];
+  tags: string[];
+  shareLabel: string;
+  shareTargets: string[];
+}
+
 export interface BlogPage {
   hero: BlogHero;
   featured: FeaturedArticle;
