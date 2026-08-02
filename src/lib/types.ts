@@ -145,6 +145,79 @@ export interface SiteFooter {
   legal: NavLink[];
 }
 
+/* ─── Страница «О нас» ─────────────────────────────────────────────── */
+
+export interface AboutCardRow {
+  label: string;
+  value: string;
+}
+
+export interface AboutHero {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  lead: string;
+  description: string;
+  cta: NavLink;
+  card: {
+    monogram: string;
+    name: string;
+    tagline: string;
+    rows: AboutCardRow[];
+    status: string;
+  };
+}
+
+export interface AboutStat {
+  value: string;
+  label: string;
+}
+
+export interface Principle {
+  id: string;
+  /** Порядковый номер-водяной знак на карточке: «01», «02», «03» */
+  index: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface AboutTeamMember {
+  id: string;
+  initials: string;
+  name: string;
+  role: string;
+  experience: string;
+  bio: string;
+  skills: string[];
+  /** Оттенок градиента аватара — в макете у каждого свой */
+  accent: "deep" | "mid" | "bright";
+}
+
+export interface AboutTechCta {
+  title: string;
+  description: string;
+  cta: NavLink;
+}
+
+export interface AboutPage {
+  hero: AboutHero;
+  stats: AboutStat[];
+  principlesEyebrow: string;
+  principlesTitle: string;
+  principlesDescription: string;
+  principles: Principle[];
+  teamEyebrow: string;
+  teamTitle: string;
+  team: AboutTeamMember[];
+  teamNote: string;
+  techEyebrow: string;
+  techTitle: string;
+  techNote: string;
+  technologies: Technology[];
+  techCta: AboutTechCta;
+}
+
 /** Полезная нагрузка формы заявки. */
 export interface LeadInput {
   name: string;

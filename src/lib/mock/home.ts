@@ -19,11 +19,12 @@ import type {
  * контракты описаны в `@/lib/types`.
  */
 
+// Якоря пишем от корня: ссылки живут и в шапке страницы «О нас».
 export const navigation: NavLink[] = [
-  { label: "Услуги", href: "#services" },
-  { label: "Блог", href: "#blog" },
-  { label: "О нас", href: "#team" },
-  { label: "Контакты", href: "#contact" },
+  { label: "Услуги", href: "/#services" },
+  { label: "Блог", href: "/#blog" },
+  { label: "О нас", href: "/about" },
+  { label: "Контакты", href: "/#contact" },
 ];
 
 export const hero: Hero = {

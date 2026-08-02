@@ -29,32 +29,42 @@ src/
   app/
     layout.tsx        шрифты, метаданные
     page.tsx          сборка секций главной
-    actions.ts        server action формы заявки
+    about/page.tsx    страница «О нас»
     globals.css       дизайн-токены из макета
   components/
     layout/           шапка, подвал, мобильное меню
     sections/         секции главной по порядку макета
+    about/            секции страницы «О нас»
     ui/               кнопка, контейнер, заголовок секции, FAQ, форма
   lib/
     types.ts          доменные типы (контракт с бэкендом)
-    mock/home.ts      мок-данные всех секций
-    api/home.ts       слой доступа к данным
-    api/client.ts     обёртка над fetch
+    mock/             мок-данные страниц
+    api/              слой доступа к данным + обёртка над fetch
 public/
-  figma/  hero/  services/  tech/   ассеты, выгруженные из макета
+  figma/ hero/ services/ tech/      ассеты главной
+  principles/ tech-light/           ассеты страницы «О нас»
 ```
+
+### Брендинг
+
+В макете главная подписана как **KTS Studio**, а страница «О нас» — как
+**DEV Studio / Digital Engineering Vanguard**. Шапка и подвал общие для обеих
+страниц и пока используют вариант с главной. Когда бренд определится, менять
+нужно будет только `footer` в [src/lib/mock/home.ts](src/lib/mock/home.ts),
+логотип в `public/figma/` и тексты в
+[src/lib/mock/about.ts](src/lib/mock/about.ts).
 
 ## Мок-данные и переход на FastAPI
 
 Всё динамическое содержимое (услуги, кейсы, команда, статьи, отзывы, FAQ,
-контакты, футер) лежит в `src/lib/mock/home.ts`. Компоненты обращаются к нему
-не напрямую, а через `src/lib/api/home.ts` — асинхронные функции с типами из
-`src/lib/types.ts`.
+контакты, футер, страница «О нас») лежит в `src/lib/mock/`. Компоненты
+обращаются к нему не напрямую, а через `src/lib/api/` — асинхронные функции
+с типами из `src/lib/types.ts`.
 
 Когда появится FastAPI:
 
 1. Задать `NEXT_PUBLIC_API_URL` в `.env.local` (пример — `.env.example`).
-2. Реализовать на бэкенде эндпоинты `/hero`, `/services`, `/portfolio`,
+2. Реализовать на бэкенде эндпоинты `/about`, `/hero`, `/services`, `/portfolio`,
    `/team`, `/posts`, `/reviews`, `/faq`, `/clients`, `/technologies`,
    `/contact`, `/footer`, `/navigation` и `POST /leads`.
 
