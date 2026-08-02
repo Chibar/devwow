@@ -300,6 +300,56 @@ export interface ServicesPage {
   cta: ServicesCta;
 }
 
+/* ─── Страница «Проекты» ───────────────────────────────────────────── */
+
+export interface ProjectsHero {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  lead: string;
+  description: string;
+  stats: AboutStat[];
+}
+
+export interface ProjectCategory {
+  id: string;
+  label: string;
+}
+
+export interface Project {
+  id: string;
+  name: string;
+  /** id категории из `ProjectCategory` — по нему работает фильтр */
+  categoryId: string;
+  category: string;
+  description: string;
+  stack: string[];
+  year: string;
+  status: string;
+  /** Завершённый проект или ещё в работе — от этого зависит вид бейджа */
+  inProgress?: boolean;
+  visual: string;
+  href: string;
+}
+
+export interface ProjectsCta {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  description: string;
+  benefits: string[];
+  primary: NavLink;
+  secondary: NavLink;
+}
+
+export interface ProjectsPage {
+  hero: ProjectsHero;
+  listTitle: string;
+  categories: ProjectCategory[];
+  projects: Project[];
+  cta: ProjectsCta;
+}
+
 /** Полезная нагрузка формы заявки. */
 export interface LeadInput {
   name: string;

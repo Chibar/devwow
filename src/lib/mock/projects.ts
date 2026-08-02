@@ -1,0 +1,166 @@
+import type { ProjectsPage } from "@/lib/types";
+
+/**
+ * Мок-данные страницы «Проекты». Тексты и цифры взяты из макета Figma
+ * (frame «Проекты»). Структура — под будущие эндпоинты FastAPI.
+ */
+export const projectsPage: ProjectsPage = {
+  hero: {
+    eyebrow: "Портфолио",
+    titleLead: "Наши ",
+    titleAccent: "проекты",
+    lead: "Выбираем технологию под задачу и доводим до результата.",
+    description:
+      "Здесь — наши лучшие работы. Каждый проект — это решение конкретной бизнес-задачи.",
+    stats: [
+      { value: "9+", label: "проектов в портфолио" },
+      { value: "100%", label: "сданы в срок" },
+      { value: "4", label: "отрасли" },
+    ],
+  },
+
+  listTitle: "Все проекты",
+  categories: [
+    { id: "all", label: "Все" },
+    { id: "web", label: "Веб-разработка" },
+    { id: "mobile", label: "Мобильные приложения" },
+    { id: "integrations", label: "Интеграции" },
+  ],
+
+  projects: [
+    {
+      id: "megamarket",
+      name: "МегаМаркет",
+      categoryId: "web",
+      category: "Веб-разработка",
+      description:
+        "Высоконагруженный маркетплейс с 2 млн+ SKU, real-time аналитикой и системой рекомендаций.",
+      stack: ["Django", "React", "PostgreSQL"],
+      year: "2024",
+      status: "Работает",
+      visual: "/project-visuals/grid.svg",
+      href: "/#contact",
+    },
+    {
+      id: "probank",
+      name: "ПроБанк",
+      categoryId: "web",
+      category: "Веб-разработка",
+      description:
+        "Цифровой банкинг с биометрической авторизацией и инвестиционным портфелем для 800 тыс. пользователей.",
+      stack: ["FastAPI", "Next.js", "Docker"],
+      year: "2024",
+      status: "Работает",
+      visual: "/project-visuals/windows.svg",
+      href: "/#contact",
+    },
+    {
+      id: "logitrack",
+      name: "LogiTrack",
+      categoryId: "integrations",
+      category: "Интеграции",
+      description:
+        "Платформа управления грузоперевозками с интеграцией в 12 транспортных компаний и ERP-системах.",
+      stack: ["FastAPI", "React", "Redis"],
+      year: "2023",
+      status: "Работает",
+      visual: "/project-visuals/dots.svg",
+      href: "/#contact",
+    },
+    {
+      id: "medpoint",
+      name: "MedPoint",
+      categoryId: "mobile",
+      category: "Мобильные приложения",
+      description:
+        "Мобильное приложение для записи к врачу с электронными рецептами и телемедициной.",
+      stack: ["React Native", "Django", "PostgreSQL"],
+      year: "2023",
+      status: "Работает",
+      visual: "/project-visuals/circles.svg",
+      href: "/#contact",
+    },
+    {
+      id: "eduspace",
+      name: "EduSpace",
+      categoryId: "web",
+      category: "Веб-разработка",
+      description:
+        "LMS-платформа для онлайн-образования с видеокурсами, тестированием и сертификатами.",
+      stack: ["Next.js", "Django", "Redis"],
+      year: "2023",
+      status: "Работает",
+      visual: "/project-visuals/grid.svg",
+      href: "/#contact",
+    },
+    {
+      id: "autopilot",
+      name: "AutoPilot",
+      categoryId: "integrations",
+      category: "Интеграции",
+      description:
+        "Система автоматизации автодилера: CRM, учёт склада, интеграция с 1С и маркетплейсами авто.",
+      stack: ["Django", "Next.js", "1С-Битрикс"],
+      year: "2025",
+      status: "В разработке",
+      inProgress: true,
+      visual: "/project-visuals/windows.svg",
+      href: "/#contact",
+    },
+    {
+      id: "retailcore",
+      name: "RetailCore",
+      categoryId: "web",
+      category: "Веб-разработка",
+      description:
+        "B2B-портал управления ассортиментом для сети из 180 магазинов с аналитикой продаж.",
+      stack: ["FastAPI", "React", "PostgreSQL"],
+      year: "2022",
+      status: "Работает",
+      visual: "/project-visuals/dots.svg",
+      href: "/#contact",
+    },
+    {
+      id: "fleetapp",
+      name: "FleetApp",
+      categoryId: "mobile",
+      category: "Мобильные приложения",
+      description:
+        "Приложение для водителей корпоративного автопарка: маршруты, путевые листы, расход топлива.",
+      stack: ["React Native", "FastAPI"],
+      year: "2022",
+      status: "Работает",
+      visual: "/project-visuals/circles.svg",
+      href: "/#contact",
+    },
+    {
+      id: "payhub",
+      name: "PayHub",
+      categoryId: "integrations",
+      category: "Интеграции",
+      description:
+        "Платёжный агрегатор с поддержкой 8 провайдеров, split-платежами и системой возвратов.",
+      stack: ["Python", "Django", "Docker"],
+      year: "2025",
+      status: "В разработке",
+      inProgress: true,
+      visual: "/project-visuals/grid.svg",
+      href: "/#contact",
+    },
+  ],
+
+  cta: {
+    eyebrow: "Начать проект",
+    titleLead: "Хотите",
+    titleAccent: "такой же проект?",
+    description:
+      "Расскажите о своей задаче — мы предложим решение, выберем стек и дадим оценку сроков за 24 часа.",
+    benefits: [
+      "Бесплатная стратегическая сессия",
+      "Оценка стоимости за 24 часа",
+      "Работаем по договору с закрывающими документами",
+    ],
+    primary: { label: "Связаться с нами", href: "/#contact" },
+    secondary: { label: "Смотреть все услуги", href: "/services" },
+  },
+};

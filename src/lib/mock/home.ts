@@ -19,12 +19,14 @@ import type {
  * контракты описаны в `@/lib/types`.
  */
 
-// Якоря пишем от корня: ссылки живут и в шапке страницы «О нас».
+// Состав меню — как в макетах внутренних страниц.
+// Якоря пишем от корня: шапка общая для всех страниц.
 export const navigation: NavLink[] = [
+  { label: "Главная", href: "/" },
   { label: "Услуги", href: "/services" },
+  { label: "Портфолио", href: "/projects" },
   { label: "Блог", href: "/#blog" },
   { label: "О нас", href: "/about" },
-  { label: "Контакты", href: "/#contact" },
 ];
 
 export const hero: Hero = {

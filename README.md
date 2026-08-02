@@ -31,12 +31,14 @@ src/
     page.tsx          сборка секций главной
     about/page.tsx    страница «О нас»
     services/page.tsx страница «Услуги»
+    projects/page.tsx страница «Проекты»
     globals.css       дизайн-токены из макета
   components/
     layout/           шапка, подвал, мобильное меню
     sections/         секции главной по порядку макета
     about/            секции страницы «О нас»
     services/         секции страницы «Услуги»
+    projects/         секции страницы «Проекты»
     ui/               кнопка, контейнер, заголовок секции, FAQ, форма
   lib/
     types.ts          доменные типы (контракт с бэкендом)
@@ -47,6 +49,7 @@ public/
   figma/ hero/ services/ tech/                  ассеты главной
   principles/ tech-light/                       ассеты «О нас»
   service-icons/ process-icons/ case-patterns/  ассеты «Услуг»
+  project-visuals/                              ассеты «Проектов»
 ```
 
 ### Брендинг
@@ -68,8 +71,8 @@ public/
 Когда появится FastAPI:
 
 1. Задать `NEXT_PUBLIC_API_URL` в `.env.local` (пример — `.env.example`).
-2. Реализовать на бэкенде эндпоинты `/about`, `/services-page`, `/hero`,
-   `/services`, `/portfolio`,
+2. Реализовать на бэкенде эндпоинты `/about`, `/services-page`,
+   `/projects-page`, `/hero`, `/services`, `/portfolio`,
    `/team`, `/posts`, `/reviews`, `/faq`, `/clients`, `/technologies`,
    `/contact`, `/footer`, `/navigation` и `POST /leads`.
 
