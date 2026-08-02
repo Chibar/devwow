@@ -21,7 +21,7 @@ import type {
 
 // Якоря пишем от корня: ссылки живут и в шапке страницы «О нас».
 export const navigation: NavLink[] = [
-  { label: "Услуги", href: "/#services" },
+  { label: "Услуги", href: "/services" },
   { label: "Блог", href: "/#blog" },
   { label: "О нас", href: "/about" },
   { label: "Контакты", href: "/#contact" },

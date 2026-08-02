@@ -218,6 +218,88 @@ export interface AboutPage {
   techCta: AboutTechCta;
 }
 
+/* ─── Страница «Услуги» ────────────────────────────────────────────── */
+
+/** Оттенок брендового градиента — в макете карточки различаются им. */
+export type BrandAccent = "deep" | "mid" | "bright" | "light";
+
+export interface ServiceTeaser {
+  id: string;
+  title: string;
+  subtitle: string;
+  accent: BrandAccent;
+}
+
+export interface ServicesHero {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  lead: string;
+  description: string;
+  teasers: ServiceTeaser[];
+}
+
+export interface ServiceOffer {
+  id: string;
+  index: string;
+  title: string;
+  description: string;
+  tags: string[];
+  icon: string;
+  href: string;
+}
+
+export interface ProcessStep {
+  id: string;
+  index: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ServiceCase {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  metrics: string[];
+  status: string;
+  pattern: string;
+  accent: BrandAccent;
+  href: string;
+}
+
+export interface ServicesCta {
+  eyebrow: string;
+  titleLead: string;
+  titleAccent: string;
+  description: string;
+  primary: NavLink;
+  secondary: NavLink;
+}
+
+export interface ServicesPage {
+  hero: ServicesHero;
+  offersEyebrow: string;
+  offersTitle: string;
+  offersDescription: string;
+  offers: ServiceOffer[];
+  processEyebrow: string;
+  processTitle: string;
+  process: ProcessStep[];
+  processNote: string;
+  casesEyebrow: string;
+  casesTitle: string;
+  cases: ServiceCase[];
+  casesLink: NavLink;
+  faqEyebrow: string;
+  faqTitle: string;
+  faqDescription: string;
+  faqCta: NavLink;
+  faq: FaqItem[];
+  cta: ServicesCta;
+}
+
 /** Полезная нагрузка формы заявки. */
 export interface LeadInput {
   name: string;

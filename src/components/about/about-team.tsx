@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container";
+import { withEmphasis } from "@/components/ui/emphasis";
 import { cn } from "@/lib/cn";
 import type { AboutTeamMember } from "@/lib/types";
 
@@ -9,19 +10,6 @@ const accents: Record<AboutTeamMember["accent"], string> = {
   bright:
     "bg-[linear-gradient(135deg,rgba(0,224,199,0.8)_0%,rgba(0,224,199,1)_100%)]",
 };
-
-/** Подсвечивает фрагменты, обёрнутые в `**…**`. */
-function withEmphasis(text: string) {
-  return text.split(/\*\*(.+?)\*\*/g).map((chunk, index) =>
-    index % 2 === 1 ? (
-      <strong key={index} className="font-semibold text-white">
-        {chunk}
-      </strong>
-    ) : (
-      chunk
-    ),
-  );
-}
 
 export function AboutTeam({
   eyebrow,

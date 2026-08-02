@@ -1,0 +1,222 @@
+import type { ServicesPage } from "@/lib/types";
+
+/**
+ * Мок-данные страницы «Услуги». Тексты и цифры взяты из макета Figma
+ * (frame «Услуги»). Структура — под будущие эндпоинты FastAPI.
+ */
+export const servicesPage: ServicesPage = {
+  hero: {
+    eyebrow: "Услуги",
+    titleLead: "Что мы ",
+    titleAccent: "делаем",
+    lead: "Разработка сложных цифровых продуктов: от веб-платформ до мобильных приложений и интеграций.",
+    description:
+      "Мы создаём системы, которые растут вместе с вашим бизнесом. Не просто сайты — архитектуру для масштабирования.",
+    teasers: [
+      {
+        id: "web",
+        title: "Веб-разработка",
+        subtitle: "Django · FastAPI · Next.js",
+        accent: "deep",
+      },
+      {
+        id: "mobile",
+        title: "Мобильные приложения",
+        subtitle: "iOS · Android · React Native",
+        accent: "mid",
+      },
+      {
+        id: "api",
+        title: "Интеграции и API",
+        subtitle: "REST · GraphQL · 1С",
+        accent: "bright",
+      },
+      {
+        id: "support",
+        title: "Техническая поддержка",
+        subtitle: "SLA · Аудит · DevOps",
+        accent: "light",
+      },
+    ],
+  },
+
+  offersEyebrow: "Что мы предлагаем",
+  offersTitle: "Разработка под вашу задачу",
+  offersDescription:
+    "Не навязываем один стек для всего. Каждое решение — это результат анализа задачи, нагрузки и бюджета.",
+  offers: [
+    {
+      id: "web",
+      index: "01",
+      title: "Веб-разработка",
+      description:
+        "Сайты, порталы, маркетплейсы, CRM-системы. Сложные решения на Django, FastAPI, Next.js — от архитектуры до CI/CD.",
+      tags: ["Next.js", "Django", "FastAPI", "PostgreSQL"],
+      icon: "/service-icons/web.svg",
+      href: "/#contact",
+    },
+    {
+      id: "mobile",
+      index: "02",
+      title: "Мобильные приложения",
+      description:
+        "iOS и Android с нативным UX, интеграцией с бэкендом и поддержкой всего жизненного цикла продукта.",
+      tags: ["React Native", "Swift", "Kotlin", "App Store"],
+      icon: "/service-icons/mobile.svg",
+      href: "/#contact",
+    },
+    {
+      id: "api",
+      index: "03",
+      title: "Интеграции и API",
+      description:
+        "Подключаем 1С, ERP, CRM, платёжные системы и любые внешние сервисы в единый контур вашего бизнеса.",
+      tags: ["REST API", "1С-Битрикс", "GraphQL", "Webhook"],
+      icon: "/service-icons/api.svg",
+      href: "/#contact",
+    },
+    {
+      id: "support",
+      index: "04",
+      title: "Техническая поддержка",
+      description:
+        "Развитие и доработка существующих проектов, технический аудит, оптимизация производительности.",
+      tags: ["SLA", "Аудит", "Оптимизация", "DevOps"],
+      icon: "/service-icons/support.svg",
+      href: "/#contact",
+    },
+  ],
+
+  processEyebrow: "Процесс",
+  processTitle: "Как мы работаем",
+  process: [
+    {
+      id: "research",
+      index: "01",
+      title: "Исследование",
+      description: "Анализируем бизнес-задачу, изучаем конкурентов и требования",
+      icon: "/process-icons/research.svg",
+    },
+    {
+      id: "architecture",
+      index: "02",
+      title: "Архитектура",
+      description: "Проектируем систему, выбираем стек, декомпозируем задачи",
+      icon: "/process-icons/architecture.svg",
+    },
+    {
+      id: "development",
+      index: "03",
+      title: "Разработка",
+      description: "Пишем код с тестами и документацией по спринтам",
+      icon: "/process-icons/development.svg",
+    },
+    {
+      id: "testing",
+      index: "04",
+      title: "Тестирование",
+      description: "Проверяем надёжность, безопасность и нагрузочную устойчивость",
+      icon: "/process-icons/testing.svg",
+    },
+    {
+      id: "launch",
+      index: "05",
+      title: "Запуск и поддержка",
+      description: "Деплой, обучение команды, сопровождение 24/7",
+      icon: "/process-icons/launch.svg",
+    },
+  ],
+  // **…** — выделение, как в макете
+  processNote:
+    "Средний цикл от старта до запуска — **8–16 недель** в зависимости от масштаба проекта. Первое демо вы увидите уже через 2 недели.",
+
+  casesEyebrow: "Портфолио",
+  casesTitle: "Примеры наших работ",
+  cases: [
+    {
+      id: "megamarket",
+      name: "МегаМаркет",
+      category: "E-commerce",
+      description:
+        "Высоконагруженный маркетплейс с 2 млн+ SKU и real-time аналитикой продаж.",
+      metrics: ["2 млн+ SKU", "340 тыс. заказов/мес"],
+      status: "Работает",
+      pattern: "/case-patterns/pattern-1.svg",
+      accent: "deep",
+      href: "/#contact",
+    },
+    {
+      id: "probank",
+      name: "ПроБанк",
+      category: "FinTech",
+      description:
+        "Цифровой банкинг с биометрической авторизацией и P2P-переводами для 800 тыс. пользователей.",
+      metrics: ["800 тыс. пользователей", "99.98% uptime"],
+      status: "Работает",
+      pattern: "/case-patterns/pattern-2.svg",
+      accent: "mid",
+      href: "/#contact",
+    },
+    {
+      id: "logitrack",
+      name: "LogiTrack",
+      category: "Логистика",
+      description:
+        "Платформа управления грузоперевозками с интеграцией в 12 транспортных компаний.",
+      metrics: ["12 интеграций", "< 80 мс API"],
+      status: "Работает",
+      pattern: "/case-patterns/pattern-3.svg",
+      accent: "bright",
+      href: "/#contact",
+    },
+  ],
+  casesLink: { label: "Смотреть все проекты", href: "/#portfolio" },
+
+  faqEyebrow: "FAQ",
+  faqTitle: "Отвечаем на главные вопросы",
+  faqDescription:
+    "Не нашли ответ? Задайте вопрос напрямую — ответим в течение рабочего дня.",
+  faqCta: { label: "Задать вопрос", href: "/#contact" },
+  faq: [
+    {
+      id: "budget",
+      question: "Какой минимальный бюджет на проект?",
+      answer:
+        "Мы берёмся за проекты от 800 тыс. ₽. Небольшие доработки и аудиты обсуждаем отдельно — если задача не наша, честно скажем об этом на первом созвоне.",
+    },
+    {
+      id: "documents",
+      question: "Вы работаете по договору и с закрывающими документами?",
+      answer:
+        "Да. Работаем по договору с приложением ТЗ, предоставляем акты и счета-фактуры. Возможна работа как с ООО, так и с ИП, включая НДС.",
+    },
+    {
+      id: "progress",
+      question: "Можно ли видеть промежуточные результаты?",
+      answer:
+        "Да. Работаем спринтами по две недели, в конце каждого показываем демо на тестовом стенде. Доска задач и отчёт по бюджету открыты для вас всё время работы.",
+    },
+    {
+      id: "after-launch",
+      question: "Что будет после запуска?",
+      answer:
+        "Предлагаем SLA-поддержку с фиксированным временем реакции, мониторингом и регулярными релизами. Либо передаём проект вашей команде с полной документацией и обучением.",
+    },
+    {
+      id: "stack",
+      question: "Какие технологии вы используете?",
+      answer:
+        "Бэкенд — Python: Django и FastAPI. Фронтенд — Next.js и React. Для контентных проектов — 1С-Битрикс. Инфраструктура — PostgreSQL, Docker, Kubernetes. Стек подбираем под задачу, а не наоборот.",
+    },
+  ],
+
+  cta: {
+    eyebrow: "Начать проект",
+    titleLead: "Готовы обсудить",
+    titleAccent: "ваш проект?",
+    description:
+      "Расскажите о задаче — подберём технологию и дадим оценку за 24 часа.",
+    primary: { label: "Оставить заявку", href: "/#contact" },
+    secondary: { label: "Смотреть кейсы", href: "/#portfolio" },
+  },
+};
