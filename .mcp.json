@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "figma-second": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--stdio",
+        "--image-dir",
+        "C:\\OSPanel\\home\\corvalol.local\\assets\\figma"
+      ],
+      "env": {
+        "FIGMA_API_KEY": "${FIGMA_TOKEN_2}"
+      }
+    }
+  }
+}
