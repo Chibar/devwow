@@ -1,0 +1,38 @@
+name: Проверки
+
+# Публикации на GitHub Pages больше нет: сайт живёт на VPS и
+# выкладывается скриптом бэкенда (deploy/deploy.sh в devwow_back), а
+# `output: "standalone"` каталога out/ не создаёт вовсе. Здесь остаются
+# только проверки, чтобы в main не уезжала несобирающаяся ветка.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Установить зависимости
+        run: npm ci
+
+      - name: Линтер
+        run: npx eslint src --max-warnings=0
+
+      - name: Типы
+        run: npx tsc --noEmit
+
+      - name: Сборка
+        # Без API_URL слой данных работает на значениях из lib/mock,
+        # поэтому бэкенд для сборки не нужен.
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+        run: npm run build
