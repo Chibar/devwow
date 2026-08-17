@@ -1,22 +1,18 @@
 import type { NextConfig } from "next";
 
 /**
- * Статический экспорт для GitHub Pages.
+ * Сборка под Node на VPS.
  *
- * basePath нужен для project-страницы (https://<owner>.github.io/<repo>/):
- * в CI он подставляется из имени репозитория, локально остаётся пустым.
+ * Раньше здесь стоял статический экспорт под GitHub Pages. Он несовместим
+ * с живым контентом: в этом режиме Next не поднимает сервер, а значит нет
+ * ни серверного рендера с запросами к API, ни ISR, ни Route Handlers —
+ * включая обработчик сброса кеша.
+ *
+ * `standalone` кладёт в сборку самодостаточный сервер вместе с нужной
+ * частью node_modules — ровно то, что нужно контейнеру.
  */
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath,
-  assetPrefix: basePath || undefined,
-  trailingSlash: true,
-  images: {
-    // На Pages нет сервера оптимизации изображений.
-    unoptimized: true,
-  },
+  output: "standalone",
 };
 
 export default nextConfig;

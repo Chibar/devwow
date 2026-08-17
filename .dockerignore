@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.git
+.github
+.claude
+.osp
+backend-handoff
+backend-handoff.zip
+backend-spec.md
+backend-spec.qna.md
+README.md
+.env*
+npm-debug.log*
