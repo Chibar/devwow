@@ -6,12 +6,11 @@ import { BlogHero } from "@/components/blog/blog-hero";
 import { BlogGrid } from "@/components/blog/blog-grid";
 import { Subscribe } from "@/components/blog/subscribe";
 import { getBlogPage } from "@/lib/api/blog";
+import { pageMetadata } from "@/lib/api/seo";
 
-export const metadata: Metadata = {
-  title: "Блог — DEV Studio",
-  description:
-    "Мысли о технологиях, управлении проектами и цифровом продукте. Статьи от разработчиков для тех, кто выбирает технологию.",
-};
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/blog");
+}
 
 export default async function BlogPage() {
   const page = await getBlogPage();

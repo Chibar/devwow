@@ -11,8 +11,20 @@ import type { NextConfig } from "next";
  * `standalone` кладёт в сборку самодостаточный сервер вместе с нужной
  * частью node_modules — ровно то, что нужно контейнеру.
  */
+/**
+ * Хост медиатеки бэкенда. Логотип и картинки из админки лежат на
+ * поддомене API, а `next/image` разрешает внешние домены по списку —
+ * без этой записи он откажется их оптимизировать.
+ */
+const mediaHost = process.env.NEXT_PUBLIC_MEDIA_HOST;
+
 const nextConfig: NextConfig = {
   output: "standalone",
+  images: {
+    remotePatterns: mediaHost
+      ? [{ protocol: "https", hostname: mediaHost, pathname: "/media/**" }]
+      : [],
+  },
 };
 
 export default nextConfig;

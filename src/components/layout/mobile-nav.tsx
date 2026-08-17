@@ -6,7 +6,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 import type { NavLink } from "@/lib/types";
 
-export function MobileNav({ items }: { items: NavLink[] }) {
+export function MobileNav({ items, cta }: { items: NavLink[]; cta: NavLink }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -35,14 +35,16 @@ export function MobileNav({ items }: { items: NavLink[] }) {
               </Link>
             ))}
           </nav>
-          <Link
-            href="/contacts"
-            onClick={() => setOpen(false)}
-            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-900 px-6 py-3 text-sm font-semibold text-white"
-          >
-            Обсудить проект
-            <ArrowRight className="size-3.5" />
-          </Link>
+          {cta.label ? (
+            <Link
+              href={cta.href}
+              onClick={() => setOpen(false)}
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-900 px-6 py-3 text-sm font-semibold text-white"
+            >
+              {cta.label}
+              <ArrowRight className="size-3.5" />
+            </Link>
+          ) : null}
         </div>
       ) : null}
     </div>

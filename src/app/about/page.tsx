@@ -8,12 +8,11 @@ import { Principles } from "@/components/about/principles";
 import { AboutTeam } from "@/components/about/about-team";
 import { AboutTech } from "@/components/about/about-tech";
 import { getAboutPage } from "@/lib/api/about";
+import { pageMetadata } from "@/lib/api/seo";
 
-export const metadata: Metadata = {
-  title: "О нас — DEV Studio",
-  description:
-    "DEV — Digital Engineering Vanguard. Мы создаём цифровые продукты, которые приносят прибыль бизнесу.",
-};
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/about");
+}
 
 export default async function AboutPage() {
   const about = await getAboutPage();

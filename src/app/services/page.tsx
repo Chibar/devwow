@@ -9,12 +9,11 @@ import { ServiceCases } from "@/components/services/service-cases";
 import { ServicesFaq } from "@/components/services/services-faq";
 import { ServicesCta } from "@/components/services/services-cta";
 import { getServicesPage } from "@/lib/api/services";
+import { pageMetadata } from "@/lib/api/seo";
 
-export const metadata: Metadata = {
-  title: "Услуги — DEV Studio",
-  description:
-    "Разработка сложных цифровых продуктов: от веб-платформ до мобильных приложений и интеграций.",
-};
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/services");
+}
 
 export default async function ServicesPage() {
   const page = await getServicesPage();

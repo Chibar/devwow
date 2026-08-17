@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooterSection } from "@/components/layout/site-footer";
 import { Hero } from "@/components/sections/hero";
@@ -9,6 +11,11 @@ import { Team } from "@/components/sections/team";
 import { Blog } from "@/components/sections/blog";
 import { ReviewsFaq } from "@/components/sections/reviews-faq";
 import { Contact } from "@/components/sections/contact";
+import { pageMetadata } from "@/lib/api/seo";
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/");
+}
 
 export default function HomePage() {
   return (

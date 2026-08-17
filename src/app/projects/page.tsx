@@ -6,12 +6,11 @@ import { ProjectsHero } from "@/components/projects/projects-hero";
 import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { ProjectsCta } from "@/components/projects/projects-cta";
 import { getProjectsPage } from "@/lib/api/projects";
+import { pageMetadata } from "@/lib/api/seo";
 
-export const metadata: Metadata = {
-  title: "Проекты — DEV Studio",
-  description:
-    "Наши проекты: веб-платформы, мобильные приложения и интеграции. Каждый проект — решение конкретной бизнес-задачи.",
-};
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/projects");
+}
 
 export default async function ProjectsPage() {
   const page = await getProjectsPage();

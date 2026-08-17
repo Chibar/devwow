@@ -525,3 +525,88 @@ export interface LeadResult {
   ok: boolean;
   message: string;
 }
+
+/* ─── Оформление и метаданные ────────────────────────────────────────
+ *
+ * Логотипы, заголовки вкладок и счётчики приходят из админки, а не
+ * лежат в коде страниц. Отдаёт их `/api/seo/site` — отдельно от
+ * контента: у тех ответов свой контракт, сверяемый с фикстурами.
+ */
+
+export interface BrandInfo {
+  siteName: string;
+  logo: string;
+  logoAlt: string;
+  logoWidth: number;
+  logoHeight: number;
+  footerLogo: string;
+  footerLogoText: string;
+  /** Часть текстового логотипа, которую красим акцентным цветом. */
+  footerLogoAccent: string;
+  favicon: string;
+  appleTouchIcon: string;
+  ogImage: string;
+  themeColor: string;
+}
+
+export interface SeoDefaults {
+  /** Шаблон заголовка вкладки, `%s` — заголовок страницы. */
+  titleTemplate: string;
+  defaultTitle: string;
+  defaultDescription: string;
+  ogSiteName: string;
+  siteUrl: string;
+  googleVerification: string;
+  yandexVerification: string;
+  /** HTML счётчиков: вставляется как есть, править может только админ. */
+  headSnippet: string;
+  bodySnippet: string;
+  noindexAll: boolean;
+}
+
+export interface PageMeta {
+  route: string;
+  name: string;
+  title: string;
+  description: string;
+  ogTitle: string;
+  ogDescription: string;
+  ogImage: string;
+  canonical: string;
+  noindex: boolean;
+}
+
+/** Куски общего макета, которые раньше были вбиты в вёрстку. */
+export interface LayoutInfo {
+  headerCta: NavLink;
+  footerContactsTitle: string;
+}
+
+export interface SiteMeta {
+  brand: BrandInfo;
+  seo: SeoDefaults;
+  layout: LayoutInfo;
+  pages: PageMeta[];
+}
+
+/* ─── Юридические документы ──────────────────────────────────────── */
+
+export interface LegalBlock {
+  type: "heading" | "paragraph" | "list";
+  text: string;
+  items: string[];
+}
+
+export interface LegalLink {
+  slug: string;
+  title: string;
+}
+
+export interface LegalDocument {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  updatedLabel: string;
+  description: string;
+  body: LegalBlock[];
+}

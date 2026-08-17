@@ -7,12 +7,11 @@ import { ContactsChannels } from "@/components/contacts/contacts-channels";
 import { ContactsMap } from "@/components/contacts/contacts-map";
 import { ContactsRequisites } from "@/components/contacts/contacts-requisites";
 import { getContactsPage } from "@/lib/api/contacts";
+import { pageMetadata } from "@/lib/api/seo";
 
-export const metadata: Metadata = {
-  title: "Контакты — DEV Studio",
-  description:
-    "Обсудим ваш проект, ответим на вопросы или просто познакомимся. Телефон, Telegram, email и реквизиты DEV Studio.",
-};
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/contacts");
+}
 
 export default async function ContactsPage() {
   const page = await getContactsPage();
