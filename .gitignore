@@ -43,3 +43,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Пакет для бэкенда: сам каталог нужен, а его побочные файлы нет
+backend-handoff.zip
+backend-handoff/__pycache__/
+
+# ТЗ и журнал согласований живут в приватном репозитории бэкенда
+backend-spec.md
+backend-spec.qna.md

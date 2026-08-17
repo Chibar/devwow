@@ -1,0 +1,97 @@
+{
+  "badge": "IT-студия полного цикла",
+  "titleLead": "Цифровые решения, что ",
+  "titleAccent": "приносят прибыль",
+  "description": "Разрабатываем веб-платформы, мобильные приложения и сложные интеграции для бизнеса, которому важен результат.",
+  "primaryCta": {
+    "label": "Обсудить проект",
+    "href": "#contact"
+  },
+  "secondaryCta": {
+    "label": "Смотреть кейсы",
+    "href": "#portfolio"
+  },
+  "stats": [
+    {
+      "value": "12+",
+      "label": "лет на рынке"
+    },
+    {
+      "value": "200+",
+      "label": "проектов"
+    },
+    {
+      "value": "95%",
+      "label": "клиентов возвращаются"
+    }
+  ],
+  "dashboard": {
+    "domain": "dashboard.kts.studio",
+    "metrics": [
+      {
+        "value": "340K",
+        "label": "Заказов/мес",
+        "delta": "+18%"
+      },
+      {
+        "value": "99.98%",
+        "label": "Uptime",
+        "delta": "↑ SLA"
+      },
+      {
+        "value": "120ms",
+        "label": "API p95",
+        "delta": "−34ms"
+      }
+    ],
+    "trafficTitle": "Трафик за 7 дней",
+    "trafficDelta": "+22%",
+    "traffic": [
+      {
+        "day": "Пн",
+        "value": 0.4
+      },
+      {
+        "day": "Вт",
+        "value": 0.65
+      },
+      {
+        "day": "Ср",
+        "value": 0.5
+      },
+      {
+        "day": "Чт",
+        "value": 0.8
+      },
+      {
+        "day": "Пт",
+        "value": 0.7
+      },
+      {
+        "day": "Сб",
+        "value": 0.9,
+        "highlighted": true
+      },
+      {
+        "day": "Вс",
+        "value": 0.75
+      }
+    ],
+    "eventsTitle": "Последние события",
+    "events": [
+      {
+        "title": "Deploy v2.4.1",
+        "time": "2 мин назад",
+        "accent": true
+      },
+      {
+        "title": "Новый клиент: ООО «Логистик»",
+        "time": "14 мин назад"
+      },
+      {
+        "title": "Alert: CPU spike 87%",
+        "time": "31 мин назад"
+      }
+    ]
+  }
+}

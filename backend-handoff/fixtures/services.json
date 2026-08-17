@@ -1,0 +1,41 @@
+[
+  {
+    "id": "web",
+    "title": "Веб-платформы",
+    "description": "Высоконагруженные маркетплейсы, корпоративные порталы и SaaS-продукты с нуля — от архитектуры до CI/CD.",
+    "icon": "/services/web.svg",
+    "features": [
+      "Next.js / React",
+      "Django / FastAPI",
+      "PostgreSQL",
+      "Kubernetes"
+    ],
+    "href": "#contact"
+  },
+  {
+    "id": "mobile",
+    "title": "Мобильные приложения",
+    "description": "iOS и Android с нативным UX, интеграцией с бэкендом и поддержкой всего жизненного цикла продукта.",
+    "icon": "/services/mobile.svg",
+    "features": [
+      "React Native",
+      "Swift / Kotlin",
+      "Push-уведомления",
+      "App Store + GP"
+    ],
+    "href": "#contact"
+  },
+  {
+    "id": "integrations",
+    "title": "Интеграции и автоматизация",
+    "description": "CRM, ERP, 1С, платёжные системы — выстраиваем цифровую инфраструктуру, работающую как единый организм.",
+    "icon": "/services/integration.svg",
+    "features": [
+      "REST / GraphQL API",
+      "1С-Битрикс",
+      "Stripe / ЮКасса",
+      "Webhook-оркестрация"
+    ],
+    "href": "#contact"
+  }
+]

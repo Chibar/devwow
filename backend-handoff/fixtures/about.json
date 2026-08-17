@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "eyebrow": "О компании",
+    "titleLead": "Кто мы и почему нам можно ",
+    "titleAccent": "доверять",
+    "lead": "DEV — Digital Engineering Vanguard. Мы создаём цифровые продукты, которые приносят прибыль бизнесу.",
+    "description": "Молодая команда с глубокой экспертизой. Работаем на Next.js, Python, Django, FastAPI и 1С-Битрикс. Выбираем технологии под задачу, а не под собственные привычки.",
+    "cta": {
+      "label": "Связаться с нами",
+      "href": "/#contact"
+    },
+    "card": {
+      "monogram": "D",
+      "name": "DEV Studio",
+      "tagline": "Digital Engineering Vanguard",
+      "rows": [
+        {
+          "label": "Год основания",
+          "value": "2013"
+        },
+        {
+          "label": "Специализация",
+          "value": "Веб / Мобайл / Интеграции"
+        },
+        {
+          "label": "Команда",
+          "value": "Опытные инженеры"
+        },
+        {
+          "label": "Подход",
+          "value": "Результат, а не процесс"
+        }
+      ],
+      "status": "Принимаем проекты · Отвечаем за 1 день"
+    }
+  },
+  "stats": [
+    {
+      "value": "12+",
+      "label": "лет опыта в разработке"
+    },
+    {
+      "value": "200+",
+      "label": "проектов выпущено"
+    },
+    {
+      "value": "95%",
+      "label": "клиентов возвращаются"
+    },
+    {
+      "value": "20+",
+      "label": "технологий в стеке"
+    }
+  ],
+  "principlesEyebrow": "Наши принципы",
+  "principlesTitle": "Три принципа, на которых мы строим работу",
+  "principlesDescription": "Эти правила появились не из воздуха — каждое из них выработано через конкретные проекты, ошибки и победы за 12 лет практики.",
+  "principles": [
+    {
+      "id": "freedom",
+      "index": "01",
+      "title": "Технологическая свобода",
+      "description": "Мы не привязаны к одному стеку. Выбираем инструмент под конкретную задачу — Next.js, FastAPI, Django или Битрикс — в зависимости от требований, а не от привычки.",
+      "icon": "/principles/freedom.svg"
+    },
+    {
+      "id": "result",
+      "index": "02",
+      "title": "Результат для бизнеса",
+      "description": "Нас не интересует красивый код ради кода. Продукт считается готовым, когда он начинает решать бизнес-задачу: генерировать лиды, ускорять процессы, снижать издержки.",
+      "icon": "/principles/result.svg"
+    },
+    {
+      "id": "transparency",
+      "index": "03",
+      "title": "Прозрачность процесса",
+      "description": "Открытый Trello/Notion, еженедельный отчёт, понятная декомпозиция бюджета. Вы всегда знаете, на что тратятся деньги и сколько осталось до запуска.",
+      "icon": "/principles/transparency.svg"
+    }
+  ],
+  "teamEyebrow": "Команда",
+  "teamTitle": "Кто создаёт DEV",
+  "team": [
+    {
+      "id": "gromov",
+      "initials": "АГ",
+      "name": "Алексей Громов",
+      "role": "CEO & Co-founder",
+      "experience": "10+ лет в IT",
+      "bio": "Стратег и точка входа для каждого клиента. Техническое образование МГТУ, прошёл путь от джуна до управляющего партнёра. Лично участвует в архитектурных сессиях.",
+      "skills": [
+        "Стратегия",
+        "Архитектура",
+        "Бизнес-анализ"
+      ],
+      "accent": "deep"
+    },
+    {
+      "id": "semenova",
+      "initials": "МС",
+      "name": "Мария Семёнова",
+      "role": "CTO",
+      "experience": "8 лет в разработке",
+      "bio": "Эксперт по высоконагруженным системам на Python и Go. До DEV — tech lead в финтех-стартапе с 5 млн пользователей. Отвечает за качество кода и архитектуру бэкенда.",
+      "skills": [
+        "Python",
+        "Django",
+        "FastAPI",
+        "Go"
+      ],
+      "accent": "mid"
+    },
+    {
+      "id": "kim",
+      "initials": "ДК",
+      "name": "Дмитрий Ким",
+      "role": "Lead Architect",
+      "experience": "12+ лет опыта",
+      "bio": "Привлекается для нестандартных архитектурных задач и крупных интеграций. Экс-Яндекс, экс-Сбер. Специализация — DDD, Event Sourcing, распределённые системы.",
+      "skills": [
+        "DDD",
+        "Microservices",
+        "Event Sourcing"
+      ],
+      "accent": "bright"
+    }
+  ],
+  "teamNote": "Мы — небольшая команда, поэтому каждый проект ведём **лично**, без передачи на аутсорс.",
+  "techEyebrow": "Стек",
+  "techTitle": "Технологии, с которыми мы работаем",
+  "techNote": "Выбираем инструмент под задачу — не наоборот.",
+  "technologies": [
+    {
+      "id": "python",
+      "name": "Python",
+      "icon": "/tech-light/python.svg"
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "icon": "/tech-light/django.svg"
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "icon": "/tech-light/nextjs.svg"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "icon": "/tech-light/react.svg"
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "icon": "/tech-light/fastapi.svg"
+    },
+    {
+      "id": "bitrix",
+      "name": "1С-Битрикс",
+      "icon": "/tech-light/bitrix.svg"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "icon": "/tech-light/postgresql.svg"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "icon": "/tech-light/docker.svg"
+    }
+  ],
+  "techCta": {
+    "title": "Не знаете, какой стек подойдёт вашей задаче?",
+    "description": "Проведём бесплатную техническую консультацию и подберём оптимальное решение.",
+    "cta": {
+      "label": "Получить консультацию",
+      "href": "/#contact"
+    }
+  }
+}

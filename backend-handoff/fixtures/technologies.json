@@ -1,0 +1,42 @@
+[
+  {
+    "id": "python",
+    "name": "Python",
+    "icon": "/tech/python.svg"
+  },
+  {
+    "id": "django",
+    "name": "Django",
+    "icon": "/tech/django.svg"
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "icon": "/tech/nextjs.svg"
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "icon": "/tech/react.svg"
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI",
+    "icon": "/tech/fastapi.svg"
+  },
+  {
+    "id": "bitrix",
+    "name": "1С-Битрикс",
+    "icon": "/tech/bitrix.svg"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "icon": "/tech/postgresql.svg"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "icon": "/tech/docker.svg"
+  }
+]

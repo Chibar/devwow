@@ -1,0 +1,38 @@
+[
+  {
+    "id": "probank",
+    "name": "ПроБанк",
+    "industry": "Финтех / банкинг",
+    "monogram": "П"
+  },
+  {
+    "id": "megamarket",
+    "name": "МегаМаркет",
+    "industry": "E-commerce",
+    "monogram": "М"
+  },
+  {
+    "id": "logitrack",
+    "name": "LogiTrack",
+    "industry": "Логистика",
+    "monogram": "L"
+  },
+  {
+    "id": "medpoint",
+    "name": "MedPoint",
+    "industry": "Здравоохранение",
+    "monogram": "M"
+  },
+  {
+    "id": "eduspace",
+    "name": "EduSpace",
+    "industry": "EdTech",
+    "monogram": "E"
+  },
+  {
+    "id": "autopilot",
+    "name": "AutoPilot",
+    "industry": "Авторынок",
+    "monogram": "A"
+  }
+]

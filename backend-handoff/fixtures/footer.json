@@ -1,0 +1,62 @@
+{
+  "description": "IT-студия полного цикла. Создаём продукты, которые решают бизнес-задачи и масштабируются вместе с вашим бизнесом.",
+  "socials": [
+    {
+      "label": "TG",
+      "href": "#"
+    },
+    {
+      "label": "VC",
+      "href": "#"
+    },
+    {
+      "label": "HH",
+      "href": "#"
+    }
+  ],
+  "navigation": {
+    "title": "Навигация",
+    "links": [
+      {
+        "label": "Главная",
+        "href": "/"
+      },
+      {
+        "label": "Услуги",
+        "href": "/services"
+      },
+      {
+        "label": "Портфолио",
+        "href": "/projects"
+      },
+      {
+        "label": "Блог",
+        "href": "/blog"
+      },
+      {
+        "label": "О нас",
+        "href": "/about"
+      },
+      {
+        "label": "Контакты",
+        "href": "/contacts"
+      }
+    ]
+  },
+  "contacts": {
+    "email": "hello@kts.studio",
+    "phone": "+7 (495) 123-45-67",
+    "address": "Москва, Варшавское шоссе, 1с1"
+  },
+  "copyright": "© 2026 KTS Studio. Все права защищены.",
+  "legal": [
+    {
+      "label": "Политика конфиденциальности",
+      "href": "#"
+    },
+    {
+      "label": "Договор оферты",
+      "href": "#"
+    }
+  ]
+}
